@@ -2,11 +2,11 @@ FROM fedora:31
 
 RUN dnf install -y npm git
 
-RUN useradd jsonserver
+RUN useradd -u 1001 jsonserver
 ADD run.sh /home/jsonserver/run.sh
 ADD backup.sh /home/jsonserver/backup.sh
 ADD server.js /home/jsonserver/server.js
-RUN chown -R jsonserver:jsonserver /home/jsonserver/
+RUN chown -R jsonserver:root /home/jsonserver/
 
 USER jsonserver
 

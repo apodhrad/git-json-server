@@ -11,7 +11,7 @@ function backup() {
 server.use(middlewares)
 router.render = (req, res) => {
   res.jsonp(res.locals.data)
-  if (req.method == 'POST' || req.method == 'PUT') {
+  if (req.method == 'POST' || req.method == 'PUT' || req.method == 'DELETE') {
     backup()
   }
 }

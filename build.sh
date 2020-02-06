@@ -1,5 +1,5 @@
 #!/bin/sh
-TAG="latest"
+TAG="0.2"
 DOCKER_IMAGE_NAME=docker.io/apodhrad/git-json-server
 
 docker rmi --force=true ${DOCKER_IMAGE_NAME}:${TAG}
