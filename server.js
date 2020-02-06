@@ -6,6 +6,7 @@ const shell = require('shelljs')
 
 function backup() {
   shell.exec('./backup.sh')
+  shell.exec('./script.sh')
 }
 
 server.use(middlewares)

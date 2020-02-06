@@ -5,6 +5,12 @@ if [ ! -z "$SSH_KEY_URL" ]; then
   chmod 400 ~/.ssh/id_rsa
 fi
 
+if [ ! -z "$SCRIPT_URL" ]; then
+  echo "Saving script from $SCRIPT_URL"
+  curl -k $SCRIPT_URL --output ~/script.sh
+  chmod a+x ~/script.sh
+fi
+
 DATA=~/data
 DB_FILE=$DATA/db.json
 if [ ! -z "$GIT_REPOSITORY" ]; then
